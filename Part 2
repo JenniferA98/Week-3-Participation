@@ -1,0 +1,41 @@
+--- Question 1
+Answer: 65,114
+
+Query:
+SELECT country, COUNT(*)
+FROM sightings
+GROUP BY country
+ORDER BY COUNT(*) DESC
+LIMIT 1;
+
+---Question 2
+Answer: CA 8,912
+
+Query:
+SELECT "state", COUNT (*)
+FROM sightings
+WHERE country ILIKE 'us'
+GROUP BY "state"
+ORDER BY COUNT(*) DESC
+LIMIT 1;
+
+---Question 3
+Answer: de 105
+
+Query:
+SELECT "state". COUNT (*)
+FROM sightings
+WHERE country ILIKE 'us'
+GROUP BY "state"
+ORDER BY COUNT(*)
+LIMIT 1;
+
+---Question 4
+Answer: 7,865
+
+Query: 
+SELECT shape, COUNT (*)
+FROM sighting 
+WHERE SHAPE ILIKE '%traingle%'
+GROUP BY shape;
+
